@@ -191,7 +191,7 @@ clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%)
 /*WORK*/
 .work_page {
 top: 50%;
-left: 17%;
+left: 0%;
 }
 
 .work_title {
@@ -253,12 +253,9 @@ display: none;
 
 /*EDUCATION*/
   .education_page {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 55%;
+    left: 0%;
   }
-
-
 
 .general_assembly {
   font-size: 45px;
@@ -303,6 +300,34 @@ p.app_academy {
   width: 800px;
   margin: 0 auto;
 }
+
+.course {
+  display: block;
+  position: fixed;
+  top: 5%;
+}
+
+.education_title {
+    font-size: 80px;
+    text-align: center;
+    padding: 0 0 5% 0;
+    color: white;
+    margin: 0 75% 0;
+}
+
+.education_body {
+  float:left;
+
+}
+.education_description {
+  float: right;
+}
+
+li.general_assembly, li.app_academy, li.u_of_o {
+  font-size: 32px;
+  color: red;
+}
+
 
 /*SOCIAL*/
 .connect_page {

@@ -179,6 +179,25 @@ var hideEducation = function(){
   $($educationContainer).css('display','none')
   }
 
+$('li.general_assembly').hover(function(){
+  console.log('hover-general')
+  $('ul.general_assembly.course').css('display','block')
+  $('ul.app_academy.course').css('display','none')
+  $('ul.u_of_o.course').css('display','none')
+})
+$('li.app_academy').hover(function(){
+  console.log('hover-AA')
+  $('ul.general_assembly.course').css('display','none')
+  $('ul.app_academy.course').css('display','block')
+  $('ul.u_of_o.course').css('display','none')
+})
+$('li.u_of_o').hover(function(){
+  console.log('hover-UOO')
+  $('ul.u_of_o.course').css('display','block')
+  $('ul.app_academy.course').css('display','none')
+  $('ul.general_assembly.course').css('display','none')
+})
+
 // SOCIAL
   $($socialSection).click(function(){
     randomBGColor()
@@ -187,5 +206,5 @@ var hideEducation = function(){
     $('div.nav_button').addClass('inSocial')
   })
 
-});;
+});
 
