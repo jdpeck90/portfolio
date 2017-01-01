@@ -7,38 +7,33 @@ $(function() {
  var $workContainer = $('div.work_container')
  var $educationSection = $('div.nav_menu.education')
  var $educationContainer = $('div.education_container')
- var $socialSection = $('div.nav_menu.social')
- var $navButton = $('div.nav_button')
-
+ var $socialSection = $('div.nav_menu.connect')
 var showNav = function() {
      randomBGColor()
      $('div.nav_page.container').css('display','block')
   }
+///////BUTTON
+$('body').on('click','div.nav_button',function(){
+      changeColor('div.nav_button')
+    rotate('div.nav_button')
+   if ($('.nav_page').is(':visible')) {
+            $('.nav_page').hide();
+            $('.hero_statement').show();
+      } else {
+            $('.container').hide();
+            $('.nav_page').show();
+            $('.hero_statement').hide();
+      }
+    })
 
-  $($navButton).click(function(event,r){
-    if($('.inAbout').length > 0) {
-      hideAbout()
-      $('div.nav_button.inAbout').removeClass('inAbout')
-      console.log('finished!')
-    } else if ($('.inWork').length > 0) {
-      console.log('inWork in da haus')
-      hideWork()
-      showNav()
-      $('div.nav_button.inWork').removeClass('inWork') }
-      else {
-    event.preventDefault()
-    $navButton.addClass('')
-    // addClassMain()
-    // changeShape()
-    randomBGColor()
-    hideHero()
-  }
-  })
 
   $('div.nav_button').hover(function(){
-    changeColor('div.nav_button')
-    rotate('div.nav_button')
+
   })
+
+// var backToMenu = function() {
+//   if($('.').is(":visible"))
+// }
 
 var changeColor = function(div){
   var colorArray = ['#93B5C6','#DDEDAA','#F0CF65','#D7816A','#BD4F6C']
@@ -60,10 +55,11 @@ var rotate = function(div){
 
 // HERO
   var hideHero = function() {
-    randomBGColor()
-    $('.hero_statement').css('display','none')
-    $('.nav_page.container').css('display','block')
+
   }
+
+
+
 
 // ABOUT
   $($aboutMenuItem).click(function(){
@@ -71,25 +67,18 @@ var rotate = function(div){
     console.log('clicked About')
     $('div.nav_page.container').css('display','none')
     $('div.about_page.container').css('display','block')
-    $('div.nav_button').addClass('inAbout')
     console.log('should have loaded, check button classes & page containers')
   })
 
-var hideAbout = function(){
-  $('div.about_page.container').css('display','none')
-   showNav()
-}
 
 // WORK
   $($workSection).click(function(){
     randomBGColor()
     $('div.nav_page.container').css('display','none')
     $('div.work_page.container').css('display','block')
-    $('div.nav_button').addClass('inWork')
   })
 
-$('span.professional h3').hover(
-  function() {
+$('span.professional h3').hover(function() {
   $("ul.professional_items").css('display','block');
   $("ul.personal_items").css('display','none');
   $(".altcoin_details").css('display','none');
@@ -105,7 +94,7 @@ $('span.personal h3').hover(
   $("ul.professional_items").css('display','none');
   $(".eco_details").css('display','none');
   $(".atmosphere_details").css('display','none');
-  $(".steelys_details").css('display','block');a
+  $(".steelys_details").css('display','block');
    })
 
 
@@ -172,8 +161,7 @@ $('div.work_page.container').css('display','none')
     randomBGColor()
     $('div.nav_page.container').css('display','none')
     $('div.education_page.container').css('display','block')
-    $('div.nav_button').addClass('inEducation')
-  })
+      })
 
 var hideEducation = function(){
   $($educationContainer).css('display','none')
@@ -200,10 +188,11 @@ $('li.u_of_o').hover(function(){
 
 // SOCIAL
   $($socialSection).click(function(){
+    console.log('beforerandom')
     randomBGColor()
-    $('div.nav_container').css('display','none')
-    $('div.social_container').css('display','block')
-    $('div.nav_button').addClass('inSocial')
+    console.log('works')
+     $('div.nav_page.container').css('display','none')
+    $('div.connect_page.container').css('display','block')
   })
 
 });
