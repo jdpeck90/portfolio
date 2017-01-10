@@ -57,17 +57,114 @@ body {
     font-family: 'Nunito Sans', sans-serif;
 }
 
+li {
+  list-style-type: none;
+}
 .showDiv {
   display: block;
 }
 
-.hideDiv {
-  display: none;
+/*HOVER EFFECT*/
+li.hoverDiv a {
+  position:relative;
+  text-transform: normal;
+  letter-spacing: .1em;
+  text-decoration: none;
+  color: #fff;
 }
 
+li.hoverDiv a:hover {
+  color: #fff;
+}
+
+li.hoverDiv a:before {
+  content: "";
+  position: absolute;
+  margin-top: 1.3em;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+li.hoverDiv a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+
+}
+a.hoverDiv {
+  position:relative;
+  text-transform: normal;
+  letter-spacing: .1em;
+  text-decoration: none;
+  color: #fff;
+}
+
+a.hoverDiv:hover {
+  color: #fff;
+}
+
+a.hoverDiv:before {
+  content: "";
+  position: absolute;
+  margin-top: 1.3em;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+a.hoverDiv:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+
+}
+span.hoverDiv {
+  position:relative;
+  text-transform: normal;
+  letter-spacing: .1em;
+  text-decoration: none;
+  color: #fff;
+}
+
+span.hoverDiv:hover {
+  color: #fff;
+}
+
+span.hoverDiv:before {
+  content: "";
+  position: absolute;
+  margin-top: 1.3em;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+span.hoverDiv:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+
+}
 
 /*HERO SECTION*/
 .hero_statement {
+  color: white;
   display: block;
   position: absolute;
     top: 50%;
@@ -143,13 +240,6 @@ clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%)
   color: white;
 }
 
-.hr_about, .hr_social {
-  width: 20%;
-}
-
- .hr_work {
-  width: 35%;
-}
  .education {
   width: 70%;
 }
@@ -167,8 +257,8 @@ clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%)
 
 /*ABOUT SECTION*/
 .about_page {
-    top: 60%;
-    left: 50%;
+    top: 51%;
+    left: 52%;
     margin-top: -18%;
     margin-left: -50%;
 }
@@ -180,24 +270,27 @@ clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%)
     width: 75%;
     margin: 0 auto;
 }
+.about_title {
+  margin-bottom: 6%;
+}
 .about_title h1 {
     font-size: 70px;
     text-align: center;
     position: absolute;
-    left: 36%;
-    top: 0%;
+    margin: 0 0 0 36%;
 }
 
 /*WORK*/
 .work_page {
-    top: 45%;
-    left: 50%;
+    top: 46%;
+    width: 100%;
+    left: 36%;
     margin-top: -18%;
     margin-left: -36%;
 }
 
-.work_title {
-    font-size: 80px;
+.work_title h1 {
+    font-size: 70px;
     text-align: center;
     padding: 3% 0 1% 0;
     color: white;
@@ -208,15 +301,24 @@ clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%)
     text-align: center;
     padding: 0;
 }
-.professional_items {
-  display: none;
-  width: 103%;
-  font-size: 20px;
-  text-align: center;
+.work_list {
+    display: block;
+    font-size: 40px;
+    text-align: center;
+    margin: 0 10px;
 }
+
+ul.work_list.per > li, ul.work_list.pro > li {
+    display: none;
+}
+
+.work_list h3 {
+  margin-bottom: 2%;
+}
+
 .personal_items {
   width: 103%;
-  display: none;
+  display: block;
   font-size: 20px;
   text-align: center;
 }
@@ -235,7 +337,7 @@ clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%)
 }
 
 .work_description {
-   margin: 3% auto;
+    margin: 3% 0 0 15%;
    width: 70%;
    font-size: 20px;
   position: fixed;
@@ -269,6 +371,7 @@ display: none;
 }
 .work_item {
   text-decoration: none;
+   font-size: 0.5em;
 }
 a.work_item {
   color: white;
@@ -281,9 +384,102 @@ a.work_item {
 
 /*EDUCATION*/
 .education_page {
-    top: 64%;
-    left: 20%;
+     top: 62%;
+    left: 28%;
   }
+
+
+
+
+
+
+.course {
+  display: none;
+  position: fixed;
+  font-size: 32px;
+  top: 42%;
+  line-height: 1.5em;
+  color: white;
+  font-size: 20px;
+  padding: 10px 40px 0 40px;
+  margin: 0 0 0 20px;
+  width: 500px;
+}
+
+
+
+
+
+.education_title {
+    font-size: 70px;
+    text-align: center;
+    padding: 0 0 5% 0;
+    color: white;
+    margin: 0 75% 0;
+}
+
+.education_body {
+    width: 100%;
+    margin-left: -10%;
+    margin-top: -5%;
+    float: left;
+}
+
+.education_list li {
+    margin-bottom: 25%;
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+}
+.education_description {
+  float: right;
+  position: relative;
+}
+li.nav_menu a:before {
+margin-top: 1.1em;
+}
+
+
+ul.app_academy.course {
+  top: 31%;
+    left: 43.5%;
+}
+p.app_academy {
+  display: none;
+  color: red;
+  font-size: 28px;
+  width: 800px;
+  margin: 0 auto;
+}
+
+p.u_of_o {
+  display: none;
+  color: red;
+  font-size: 32px;
+  margin: 0 auto;
+}
+ul.u_of_o.course {
+  top: 33%;
+}
+li.u_of_o.details_project {
+    line-height: 1.1;
+    width: 500px;
+    margin-top: 30px;
+}
+
+ul.general_assembly {
+}
+img.general_assembly {
+  width: 500px;
+}
+ul.general_assembly.course {
+    top: 31.5%;
+    left: 44.5%;
+}
+
+a.gali {
+  margin-right: 20px;
+}
 
 p.general_assembly {
   display: none;
@@ -292,68 +488,28 @@ p.general_assembly {
   width: 400px;
   margin: 0 auto;
 }
+img.app_academy, img.u_of_o {
+  width: 400px;
+}
 
-p.u_of_o {
-  display: none;
-  color: red;
-  font-size: 26px;
-  width: 800px;
+
+
+li.details_title {
   margin: 0 auto;
-}
-p.app_academy {
-  display: none;
-  color: red;
-  font-size: 26px;
-  width: 800px;
-  margin: 0 auto;
-}
-
-.course {
-  display: none;
-  position: fixed;
-  top: 47%;
-  color: white;
-  font-size: 45px;
-  padding: 10px 40px 0 40px;
-  margin: 0 0 0 20px;
-  width: 500px;
-  height: 300px;
-}
-
-.education_title {
-    font-size: 80px;
-    text-align: center;
-    padding: 0 0 5% 0;
-    color: white;
-    margin: 0 75% 0;
-}
-
-.education_body {
-  margin-left: 30%;
-  margin-top: 10%;
-  float:left;
-
-}
-
-.education_list li {
-  margin-bottom: 14px;
-  text-align: center;
-}
-
-
-.education_description {
-  float: right;
-  position: relative;
+  padding: 0;
 }
 
 
 
-li.general_assembly, li.app_academy, li.u_of_o {
+/*li.ed_item {
   font-size: 32px;
   color: white;
+  margin-top: 3.125em;
+}*/
+
+ul.course {
+  font-size: 30px;
 }
-
-
 /*SOCIAL*/
 .connect_page {
     top: 80%;

@@ -10,17 +10,13 @@
       <h1>JUSTIN PECK</h1> <br>
       <h4>FULL STACK <br> DEVELOPER</h4>
     </div>
-  <div class="nav_page container">
-    <div class="nav_menu about">ABOUT</div>
-      <hr class="hr_about">
-    <div class="nav_menu work">WORK</div>
-      <hr class="hr_work">
-    <div class="nav_menu education">EDUCATION</div>
-      <hr class="hr_education">
-    <div class="nav_menu connect">CONNECT</div>
-      <hr class="hr_connect">
+  <ul class="nav_page container">
+    <li class="nav_menu about hoverDiv"><a href="#">ABOUT</a></li>
+    <li class="nav_menu work hoverDiv"><a href="#" >WORK</a></li>
+    <li class="nav_menu education hoverDiv"><a href="#">EDUCATION</a></li>
+    <li class="nav_menu connect hoverDiv"><a href="#">CONNECT</a></li>
+  </ul>
 
-  </div>
    <div class="about_page container">
     <div class="about_title">
       <h1>ABOUT ME</h1>
@@ -36,26 +32,20 @@
     <h1>WORK</h1>
     </div>
     <div class="work_body">
-      <span class='professional'>
-       <h3>PROFESSIONAL WORK</h3>
-         <ul class='professional_items'>
-           <li class='atmosphere work_item'><a href="https://atmosphere-clothing.com/">Atmosphere Super Fashion Company</a></li>
-           <li class='steelys work_item'><a href="http://steelysdrinkware.com/">Steelys Drinkware</a></li>
-           <li class='eco work_item'><a href="http://www.ecoimprints.com/">Eco Imprints</a></li>
+         <ul class='work_list pro'>
+            <h3>PROFESSIONAL WORK</h3>
+             <li class='atmosphere work_item hoverDiv'><a href="https://atmosphere-clothing.com/">Atmosphere Super Fashion Company</a></li>
+             <li class='steelys work_item hoverDiv'><a href="http://steelysdrinkware.com/">Steelys Drinkware</a></li>
+             <li class='eco work_item hoverDiv'><a href="http://www.ecoimprints.com/">Eco Imprints</a></li>
          </ul>
-        <br>
-      </span>
-      <span class='professional'>|</span>
-      <span class='personal'>
-        <h3>PERSONAL PROJECTS</h3>
-         <ul class='personal_items'>
-           <li class='shmabble work_item'><a href="#">Shmabble</a> -- <a href="">Source Code</a></li>
-           <li class='altcoin work_item'><a href="#">Altcoin Tracker</a> -- <a href="">Source Code</a></li>
-           <li class='tripPlanner work_item'><a href="#">Trip Planner</a> -- <a href="">Source Code</a></li>
-         </ul>
-        <br>
-      </span>
-    </div>
+      <ul class='work_list'>|</ul>
+         <ul class='work_list per'>
+           <h3>PERSONAL PROJECTS</h3>
+           <li class='shmabble work_item hoverDiv'><a href="#">Shmabble</a> -- <a href="">Source Code</a></li>
+           <li class='altcoin work_item hoverDiv'><a href="#">Altcoin Tracker</a> -- <a href="">Source Code</a></li>
+           <li class='tripPlanner work_item hoverDiv'><a href="#">Trip Planner</a> -- <a href="">Source Code</a></li>
+      </ul>
+</div>
     <div class='work_description'>
     <div class='shmabble_details'>
       <p>
@@ -98,39 +88,38 @@
   <br>
   <div class="education_body">
     <ul class='education_list'>
-      <li class="general_assembly"><a href="#">General Assembly</a></li>
-      <li class="general_assembly course"></li>
-      <li class="app_academy"><a href="#">App Academy</a></li>
-      <li class="app_academy course"></li>
-      <li class="u_of_o"><a href="#">University of Oregon</a></li>
-      <li class="u_of_o course"></li>
+      <li class="ed_item ed_ga hoverDiv"><a href="#">General Assembly</a></li>
+      <li class="ed_item ed_uo hoverDiv"><a href="#">University of Oregon</a></li>
+      <li class="ed_item ed_aa hoverDiv"><a href="#">App Academy</a></li>
+      <br>
+      <br>
     </ul>
   </div>
   <div class="education_description">
     <div class="details">
         <ul class="app_academy course">
-          <li class="app_academy details_image">App Academy Image</li>
-          <li class="app_academy details_title">Sept - Nov 2016</li>
-          <li class="app_academy details_description">During this 1 month long online Javascript intensive course I learned the basic princ</li>
-          <li class="app_academy details_projects">Project 4</li>
+          <li class="app_academy details_image"><img class="app_academy" src="../../img/appacademy.png"></li>
+          <li class="app_academy details_title">Javascript intensive bootcamp prep course</li>
+          <li class="app_academy details_description">Sept - Nov 2016</li>
+          <li class="app_academy details_projects hoverDiv">Final Project</li>
         </ul>
     </div>
     <div class="details">
         <ul class="general_assembly course">
-          <li class="general_assembly details_image">GENERAL ASSEMBLY IMAGE</li>
-          <li class="general_assembly details_title">WDI Imersive</li>
-          <li class="general_assembly details_description">
-          WDI is web development immersve that
-          </li>
-          <li class="general_assembly details_projects">Project 1</li>
+          <li class="general_assembly details_image"><img class="general_assembly" src="../../img/generalassembly.png"></li>
+          <li class="general_assembly details_title">Web Development Immersive</li>
+          <li class="general_assembly details_description">Nov 2016 - Jan 2017</li>
+          <li class="general_assembly details_projects"><span><a class="gali hoverDiv" href="https://github.com/jdpeck90/Altcoin-Tracker">Altcoin Tracker</a><a class="hoverDiv" href="https://github.com/jdpeck90/Shmabble-Game"> Shmabble</a></span></li>
+          <li class="general_assembly details_projects"><span><a class="gali hoverDiv" href="https://github.com/donutdespair/tripplanner">Trip Planner</a><a href="https://github.com/jdpeck90/Mean-Stack-Angular-2-Movie-App"><span class="hoverDiv">Angular 2 Movie-App</span></a></span></li>
+<!--    -->
         </ul>
     </div>
     <div class="details">
         <ul class="u_of_o course">
-          <li class="u_of_o details_image">U OF OREGON IMSH+GE</li>
-          <li class="u_of_o details_title">B.S in Economics.</li>
-          <li class="u_of_o details_description">B.S in Economics.</li>
-          <li class="u_of_o details_projects">B.S in Economics.</li>
+          <li class="u_of_o details_image"><img class="u_of_o" src="../../img/uofo.png"></li>
+          <li class="u_of_o details_title">B.S in Economics | Minor in Mandarin Chinese</li>
+          <li class="u_of_o details_description">Sept 2009 - June 2013</li>
+          <li class="u_of_o details_projects"><a href="#">The Effects of Income, Population and Other Variables on the Growth of <span class="hoverDiv">Philadelphia International</span> <span class="hoverDiv">Airport</span></a></li>
         </ul>
     </div>
   </div>

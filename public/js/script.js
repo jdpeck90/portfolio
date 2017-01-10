@@ -1,16 +1,16 @@
 $(function() {
+
   console.log( 'script loaded!' );
  var $hero = $('hero_statement')
  var $navContainer = $('nav_container')
- var $aboutMenuItem = $('div.nav_menu.about')
- var $workSection = $('div.nav_menu.work')
- var $workContainer = $('div.work_container')
- var $educationSection = $('div.nav_menu.education')
- var $educationContainer = $('div.education_container')
- var $socialSection = $('div.nav_menu.connect')
+ var $aboutMenuItem = $('li.nav_menu.about')
+ var $workSection = $('li.nav_menu.work')
+ var $workContainer = $('li.work_container')
+ var $educationSection = $('li.nav_menu.education')
+ var $socialSection = $('li.nav_menu.connect')
 var showNav = function() {
      randomBGColor()
-     $('div.nav_page.container').css('display','block')
+     $('ul.nav_page.container').css('display','block')
   }
 ///////BUTTON
 $('body').on('click','div.nav_button',function(){
@@ -53,6 +53,8 @@ var rotate = function(div){
   $('body').css('background-color',backgroundColorArray[randNum])
   }
 
+  $()
+
 // HERO
   var hideHero = function() {
 
@@ -64,23 +66,22 @@ var rotate = function(div){
 // ABOUT
   $($aboutMenuItem).click(function(){
     randomBGColor()
-    console.log('clicked About')
-    $('div.nav_page.container').css('display','none')
+    $('ul.nav_page.container').css('display','none')
     $('div.about_page.container').css('display','block')
-    console.log('should have loaded, check button classes & page containers')
   })
 
 
 // WORK
   $($workSection).click(function(){
     randomBGColor()
-    $('div.nav_page.container').css('display','none')
+    $('ul.nav_page.container').css('display','none')
     $('div.work_page.container').css('display','block')
   })
 
-$('span.professional h3').hover(function() {
-  $("ul.professional_items").css('display','block');
-  $("ul.personal_items").css('display','none');
+$('ul.pro h3').hover(function() {
+  console.log('pro works')
+  $("ul.pro > li").css('display','block');
+  $("ul.per > li").css('display','none');
   $(".altcoin_details").css('display','none');
   $(".tripPlanner_details").css('display','none');
   $(".shmabble_details").css('display','none');
@@ -88,13 +89,13 @@ $('span.professional h3').hover(function() {
 
 
 
-$('span.personal h3').hover(
+$('ul.per h3').hover(
   function() {
-  $("ul.personal_items").css('display','block');
-  $("ul.professional_items").css('display','none');
+  $("ul.per > li").css('display','block');
+  $("ul.pro > li").css('display','none');
   $(".eco_details").css('display','none');
   $(".atmosphere_details").css('display','none');
-  $(".steelys_details").css('display','block');
+  $(".steelys_details").css('display','none');
    })
 
 
@@ -126,18 +127,16 @@ $("li.atmosphere").hover(
    })
 $("li.steelys").hover(
   function() {
-    console.log('steelys hover')
-  $(".eco_details").css('display','none');
+   $(".eco_details").css('display','none');
    $(".atmosphere_details").css('display','none');
    $(".steelys_details").css('display','block');
-   })
+})
 $("li.eco").hover (
   function() {
-    console.log('eco hover')
-  $(".atmosphere_details").css('display','none');
+   $(".atmosphere_details").css('display','none');
    $(".steelys_details").css('display','none');
    $(".eco_details").css('display','block');
-   })
+})
 // $("span.professional").click(function(){
 //     $("p.professional").slideToggle('slow','swing');
 //     $("span.professional").addClass('toggleDown')
@@ -153,33 +152,30 @@ $("span.personal").click(function(){
 });
 
   var hideWork = function(){
-$('div.work_page.container').css('display','none')
+    $('div.work_page.container').css('display','none')
   }
 
 // EDUCATION
   $($educationSection).click(function(){
     randomBGColor()
-    $('div.nav_page.container').css('display','none')
+    $('ul.nav_page.container').css('display','none')
     $('div.education_page.container').css('display','block')
-      })
+  })
 
-var hideEducation = function(){
-  $($educationContainer).css('display','none')
-  }
 
-$('li.general_assembly').hover(function(){
+$('li.ed_item.ed_ga').hover(function(){
   console.log('hover-general')
   $('ul.general_assembly.course').css('display','block')
   $('ul.app_academy.course').css('display','none')
   $('ul.u_of_o.course').css('display','none')
 })
-$('li.app_academy').hover(function(){
+$('li.ed_item.ed_aa').hover(function(){
   console.log('hover-AA')
   $('ul.general_assembly.course').css('display','none')
   $('ul.app_academy.course').css('display','block')
   $('ul.u_of_o.course').css('display','none')
 })
-$('li.u_of_o').hover(function(){
+$('li.ed_item.ed_uo').hover(function(){
   console.log('hover-UOO')
   $('ul.u_of_o.course').css('display','block')
   $('ul.app_academy.course').css('display','none')
@@ -191,7 +187,7 @@ $('li.u_of_o').hover(function(){
     console.log('beforerandom')
     randomBGColor()
     console.log('works')
-     $('div.nav_page.container').css('display','none')
+     $('ul.nav_page.container').css('display','none')
     $('div.connect_page.container').css('display','block')
   })
 

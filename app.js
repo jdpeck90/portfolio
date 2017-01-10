@@ -11,7 +11,7 @@ app.set("views",__dirname + "/views");
 app.use('/', exp.static(__dirname + '/public'));
 
 app.listen(3000, function(){
-  console.log('alive on 3k, yo.');
+  console.log('alive on 3k');
 });
 
 //show all users.
