@@ -216,6 +216,8 @@ shape-inside: polygon(nonzero,1225px 176px, 1170px 134px, 1186px 113px, 1240px 1
 .nav_button {
   width: 100px;
   height: 100px;
+  position: relative;
+  z-index: 50;
   shape-padding: 10px;
   -webkit-transition-duration: 5s; /* Safari */
     transition-duration: 5s;
@@ -255,6 +257,7 @@ clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%)
 
 /*ABOUT SECTION*/
 .about_page {
+    z-index: 5;
     top: 11%;
     left: 2%;
 }
@@ -282,6 +285,7 @@ clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%)
 
 /*WORK*/
 .work_page {
+    z-index: 5;
     top: 46%;
     width: 100%;
     left: 36%;
@@ -343,9 +347,16 @@ ul.work_list.per > li, ul.work_list.pro > li {
   position: fixed;
 }
 .social {
-  display: inline;
+  display: block;
+  letter-spacing: .1em;
+  font-size: 45px;
+  text-align: center;
+  margin: 25px 0 15px 0;
+  color: white;
 }
-
+.connect_list {
+  line-height: 60px;
+}
 .altcoin_details {
   display: none;
 }
@@ -386,6 +397,7 @@ a.work_item {
 .education_page {
     top: 15%;
     left: 20%;
+    z-index: 5;
   }
 
 
@@ -462,9 +474,14 @@ ul.u_of_o.course {
   left: 52%;
 }
 
+li.details_projects {
+      margin: -5px;
+    font-size: 24px;
+}
+
 li.u_of_o.details_projects {
     width: 500px;
-    margin-top: 30px;
+    margin-top: 15px;
     line-height: 1.1;
 }
 
@@ -474,11 +491,6 @@ img.general_assembly {
 ul.general_assembly.course {
     left: 52%;
 }
-
-a.gali {
-  margin-right: 20px;
-}
-
 p.general_assembly {
   display: none;
   color: blue;
@@ -497,6 +509,9 @@ li.details_title {
   padding: 0;
 }
 
+li.details_description{
+  margin-bottom: 15px;
+}
 
 
 /*li.ed_item {
@@ -510,8 +525,9 @@ ul.course {
 }
 /*SOCIAL*/
 .connect_page {
-    top: 33%;
-    left: 18%;
+    z-index: 5;
+    top: 19%;
+    left: 36%;
 }
 
 .linked_in {
